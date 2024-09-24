@@ -7,7 +7,7 @@ let ChatID = ''; //可以为空，或者@userinfobot中获取，/start
 let TG = 0; //小白勿动， 开发者专用，1 为推送所有的访问信息，0 为不推送订阅转换后端的访问信息与异常访问
 let FileName = 'CF-Workers-SUB';
 let SUBUpdateTime = 6; //自定义订阅更新时间，单位小时
-let total = 99;//TB
+let total = 999;//TB
 let timestamp = 4102329600000;//2099-12-31
 
 let cacheTTL = 24;//小时，缓存时长
@@ -19,6 +19,7 @@ vmess://eyJhZGQiOiJbMjQwMDo4YTIwOjExMjoxOjoxNTldIiwiYWlkIjoiMCIsImhvc3QiOiJ3YXAu
 hysteria2://377cef77-6e39-4280-b5c9-429f1a60c40f@wap.kkbi.me:35727?&alpn=h3&insecure=0&mport=35727&sni=wap.kkbi.me#hy2-ubuntu
 tuic://377cef77-6e39-4280-b5c9-429f1a60c40f:377cef77-6e39-4280-b5c9-429f1a60c40f@wap.kkbi.me:63062?congestion_control=bbr&udp_relay_mode=native&alpn=h3&sni=wap.kkbi.me&allow_insecure=0#tu5-ubuntu
 https://dadada.acaisbest.com/api/v1/client/subscribe?token=34e92a0b7607e1402b7b552b565bd859
+https://l7e14.no-mad-world.club/link/dzh905a4AS7xOCuh?clash=3&extend=1
 `
 
 let urls = [];
