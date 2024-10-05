@@ -28,9 +28,8 @@ https://davy520.pages.dev/96821107-ac42-438a-b781-a5999197a21c#%E8%87%AA%E5%BB%B
 https://sub.mxlweb.xyz/free
 https://pqjc.site/api/v1/client/subscribe?token=721c839e5146f6594ab607f23ee71acb
 https://v2.chatpro.icu/api/v1/client/subscribe?token=af539924756432c3abef2f7a8fa33eba
-https://sublink.52cloud.eu.org/api/v1/client/subscribe?token=8025d164-d726-40ed-af06-d7ea1138d1a4
 `
-
+// https://sublink.52cloud.eu.org/api/v1/client/subscribe?token=8025d164-d726-40ed-af06-d7ea1138d1a4
 let urls = [];
 let subconverter = "SUBAPI.fxxk.dedyn.io"; //在线订阅转换后端，目前使用CM的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
 let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_MultiCountry.ini"; //订阅配置文件
