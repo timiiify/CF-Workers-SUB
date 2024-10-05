@@ -19,7 +19,6 @@ vmess://eyJhZGQiOiJbMjQwMDo4YTIwOjExMjoxOjoxNTldIiwiYWlkIjoiMCIsImhvc3QiOiJ3YXAu
 hysteria2://377cef77-6e39-4280-b5c9-429f1a60c40f@wap.kkbi.me:35727?&alpn=h3&insecure=0&mport=35727&sni=wap.kkbi.me#hy2-ubuntu
 tuic://377cef77-6e39-4280-b5c9-429f1a60c40f:377cef77-6e39-4280-b5c9-429f1a60c40f@wap.kkbi.me:63062?congestion_control=bbr&udp_relay_mode=native&alpn=h3&sni=wap.kkbi.me&allow_insecure=0#tu5-ubuntu
 https://nd6bi.no-mad-world.club/link/dzh905a4AS7xOCuh?clash=3&extend=1
-https://update.glados-config.com/v2ray/513582/1263cc72cd014fd7
 `
 
 let urls = [];
