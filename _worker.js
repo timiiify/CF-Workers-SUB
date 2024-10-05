@@ -18,7 +18,7 @@ vless://377cef77-6e39-4280-b5c9-429f1a60c40f@[2400:8a20:112:1::159]:57410?encryp
 vmess://eyJhZGQiOiJbMjQwMDo4YTIwOjExMjoxOjoxNTldIiwiYWlkIjoiMCIsImhvc3QiOiJ3YXAua2tiaS5tZSIsImlkIjoiMzc3Y2VmNzctNmUzOS00MjgwLWI1YzktNDI5ZjFhNjBjNDBmIiwibmV0Ijoid3MiLCJwYXRoIjoiMzc3Y2VmNzctNmUzOS00MjgwLWI1YzktNDI5ZjFhNjBjNDBmLXZtIiwicG9ydCI6IjIwODMiLCJwcyI6InZtLXdzLXRscy11YnVudHUiLCJ0bHMiOiJ0bHMiLCJzbmkiOiJ3YXAua2tiaS5tZSIsInR5cGUiOiJub25lIiwidiI6IjIifQo=
 hysteria2://377cef77-6e39-4280-b5c9-429f1a60c40f@wap.kkbi.me:35727?&alpn=h3&insecure=0&mport=35727&sni=wap.kkbi.me#hy2-ubuntu
 tuic://377cef77-6e39-4280-b5c9-429f1a60c40f:377cef77-6e39-4280-b5c9-429f1a60c40f@wap.kkbi.me:63062?congestion_control=bbr&udp_relay_mode=native&alpn=h3&sni=wap.kkbi.me&allow_insecure=0#tu5-ubuntu
-https://dadada.acaisbest.com/api/v1/client/subscribe?token=34e92a0b7607e1402b7b552b565bd859
+https://dadada.acaisbest.com/api/v1/client/subscribe?token=79040356cdd9a18a5edbc48226560416
 https://l7e14.no-mad-world.club/link/dzh905a4AS7xOCuh?clash=3&extend=1
 `
 
