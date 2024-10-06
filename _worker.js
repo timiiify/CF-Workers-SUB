@@ -1,40 +1,22 @@
 
 // 部署完成后在网址后面加上这个，获取自建节点和机场聚合节点，/?token=auto或/auto或
 
-let mytoken = 'clash.yaml'; //可以随便取，或者uuid生成，https://1024tools.com/uuid
+let mytoken = 'auto'; //可以随便取，或者uuid生成，https://1024tools.com/uuid
 let BotToken = ''; //可以为空，或者@BotFather中输入/start，/newbot，并关注机器人
 let ChatID = ''; //可以为空，或者@userinfobot中获取，/start
 let TG = 0; //小白勿动， 开发者专用，1 为推送所有的访问信息，0 为不推送订阅转换后端的访问信息与异常访问
-let FileName = '个人专用';
+let FileName = 'CF-Workers-SUB';
 let SUBUpdateTime = 6; //自定义订阅更新时间，单位小时
 let total = 999;//TB
 let timestamp = 4102329600000;//2099-12-31
-let cacheTTL = 24;//小时，缓存时长
 
 //节点链接 + 订阅链接
 let MainData = `
-vless://377cef77-6e39-4280-b5c9-429f1a60c40f@[2400:8a20:112:1::159]:57410?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.yahoo.com&fp=chrome&pbk=60pB_Ww1xiAsiH2bZik5Vwfp835uvytzSBy98LprIWk&sid=0dd58a92&type=tcp&headerType=none#vl-reality-ubuntu
-vmess://eyJhZGQiOiJbMjQwMDo4YTIwOjExMjoxOjoxNTldIiwiYWlkIjoiMCIsImhvc3QiOiJ3YXAua2tiaS5tZSIsImlkIjoiMzc3Y2VmNzctNmUzOS00MjgwLWI1YzktNDI5ZjFhNjBjNDBmIiwibmV0Ijoid3MiLCJwYXRoIjoiMzc3Y2VmNzctNmUzOS00MjgwLWI1YzktNDI5ZjFhNjBjNDBmLXZtIiwicG9ydCI6IjIwODMiLCJwcyI6InZtLXdzLXRscy11YnVudHUiLCJ0bHMiOiJ0bHMiLCJzbmkiOiJ3YXAua2tiaS5tZSIsInR5cGUiOiJub25lIiwidiI6IjIifQo=
-hysteria2://377cef77-6e39-4280-b5c9-429f1a60c40f@wap.kkbi.me:35727?&alpn=h3&insecure=0&mport=35727&sni=wap.kkbi.me#hy2-ubuntu
-tuic://377cef77-6e39-4280-b5c9-429f1a60c40f:377cef77-6e39-4280-b5c9-429f1a60c40f@wap.kkbi.me:63062?congestion_control=bbr&udp_relay_mode=native&alpn=h3&sni=wap.kkbi.me&allow_insecure=0#tu5-ubuntu
-https://dadada.acaisbest.com/api/v1/client/subscribe?token=79040356cdd9a18a5edbc48226560416
-https://o.clmurl2.com/api/v1/client/subscribe?token=12a05fb4d30d3793b7582d6d827902ed
-https://free.andiliba.cc/link/f2fa04a7dc6856dc?clash=1
-https://xquigzxz2.youxuan.wiki/api/v1/client/subscribe?token=dd5ecfb47379d2b37599feb4b43931bf
-https://sub.xunlian.site//api/v1/client/subscribe?token=17b619d61ef041a48432223e4a70db2a
-https://d7b12d59-21aa-9561-087f-89c834ac7fe8.372372.xyz/api/v1/client/subscribe?token=a0dcd411f821385d1a7567d12fd8e66b
-https://davy520.pages.dev/96821107-ac42-438a-b781-a5999197a21c#%E8%87%AA%E5%BB%BA
-https://pqjc.site/api/v1/client/subscribe?token=721c839e5146f6594ab607f23ee71acb
 
 `
-// https://sublink.52cloud.eu.org/api/v1/client/subscribe?token=8025d164-d726-40ed-af06-d7ea1138d1a4
-// https://sub.443888.xyz/sub?host=TG.CMLiussss.dns-dynamic.net&uuid=27b644d3-d9e8-45b2-96db-36ac1d00d50d
-// https://ssvless.sosorg.nyc.mn/sub?host=TG.CMLiussss.dns-dynamic.net&uuid=27b644d3-d9e8-45b2-96db-36ac1d00d50d
-// https://alvless.comorg.us.kg/sub?host=TG.CMLiussss.dns-dynamic.net&uuid=27b644d3-d9e8-45b2-96db-36ac1d00d50d
-// https://vless.fxxk.dedyn.io/sub?host=TG.CMLiussss.dns-dynamic.net&uuid=27b644d3-d9e8-45b2-96db-36ac1d00d50d
-// https://sub.mxlweb.xyz/free
+
 let urls = [];
-let subconverter = "subapi.fxxk.dedyn.io"; //在线订阅转换后端，目前使用CM的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
+let subconverter = "SUBAPI.fxxk.dedyn.io"; //在线订阅转换后端，目前使用CM的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
 let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_MultiCountry.ini"; //订阅配置文件
 let subProtocol = 'https';
 
@@ -86,13 +68,9 @@ export default {
 
 		if (!(token == mytoken || token == fakeToken || url.pathname == ("/" + mytoken) || url.pathname.includes("/" + mytoken + "?"))) {
 			if (TG == 1 && url.pathname !== "/" && url.pathname !== "/favicon.ico") await sendMessage(`#异常访问 ${FileName}`, request.headers.get('CF-Connecting-IP'), `UA: ${userAgent}</tg-spoiler>\n域名: ${url.hostname}\n<tg-spoiler>入口: ${url.pathname + url.search}</tg-spoiler>`);
-			const envKey = env.URL302 ? 'URL302' : (env.URL ? 'URL' : null);
-			if (envKey) {
-				const URLs = await ADD(env[envKey]);
-				const URL = URLs[Math.floor(Math.random() * URLs.length)];
-				return envKey === 'URL302' ? Response.redirect(URL, 302) : fetch(new Request(URL, request));
-			}
-			return new Response(await nginx(), {
+			if (env.URL302) return Response.redirect(env.URL302, 302);
+			else if (env.URL) return await proxyURL(env.URL, url);
+			else return new Response(await nginx(), {
 				status: 200,
 				headers: {
 					'Content-Type': 'text/html; charset=UTF-8',
@@ -103,7 +81,7 @@ export default {
 			let 订阅格式 = 'base64';
 			if (userAgent.includes('null') || userAgent.includes('subconverter') || userAgent.includes('nekobox') || userAgent.includes(('CF-Workers-SUB').toLowerCase())) {
 				订阅格式 = 'base64';
-			} else if (userAgent.includes('clash') || userAgent.includes('Shadowrocket') || (url.searchParams.has('clash') && !userAgent.includes('subconverter'))) {
+			} else if (userAgent.includes('clash') || (userAgent.includes('Shadowrocket') || (url.searchParams.has('clash') && !userAgent.includes('subconverter'))) {
 				订阅格式 = 'clash';
 			} else if (userAgent.includes('sing-box') || userAgent.includes('singbox') || ((url.searchParams.has('sb') || url.searchParams.has('singbox')) && !userAgent.includes('subconverter'))) {
 				订阅格式 = 'singbox';
@@ -116,87 +94,16 @@ export default {
 			//console.log(订阅转换URL);
 			let req_data = MainData;
 
-			// 初始化缓存
-			const cache = caches.default;
-
 			let 追加UA = 'v2rayn';
-			if (url.searchParams.has('clash')) {
-				追加UA = 'clash';
-			} else if (url.searchParams.has('singbox')) {
-				追加UA = 'singbox';
-			} else if (url.searchParams.has('surge')) {
-				追加UA = 'surge';
-			}
+			if (url.searchParams.has('clash')) 追加UA = 'clash';
+			else if (url.searchParams.has('singbox')) 追加UA = 'singbox';
+			else if (url.searchParams.has('surge')) 追加UA = 'surge';
 
-			try {
-				const responses = await Promise.all(urls.map(async url => {
-					const cacheKey = new Request(url);
+			const 请求订阅响应内容 = await getSUB(urls, 追加UA, userAgentHeader);
+			console.log(请求订阅响应内容);
+			req_data += 请求订阅响应内容[0].join('\n');
+			订阅转换URL += "|" + 请求订阅响应内容[1];
 
-					try {
-						// 设置2秒超时
-						const controller = new AbortController();
-						const timeoutId = setTimeout(() => controller.abort(), 2000);
-
-						const response = await fetch(url, {
-							method: 'get',
-							headers: {
-								'Accept': 'text/html,application/xhtml+xml,application/xml;',
-								'User-Agent': `${追加UA} cmliu/CF-Workers-SUB ${userAgentHeader}`
-							},
-							signal: controller.signal
-						});
-
-						clearTimeout(timeoutId);
-
-						if (response.ok) {
-							const content = await response.text();
-
-							// 请求成功，写入缓存，设置24小时的缓存时间
-							const cacheResponse = new Response(content, {
-								headers: {
-									...response.headers,
-									'Cache-Control': `public, max-age=${cacheTTL * 60 * 60}`
-								}
-							});
-							await cache.put(cacheKey, cacheResponse);
-							console.log(`更新缓存 ${url}:\n${content.slice(0, 10)}...`);
-							if (content.includes('dns') && content.includes('proxies') && content.includes('proxy-groups')) {
-								// Clash 配置
-								订阅转换URL += "|" + url;
-								return ""; // 返回空字符串，因为这种情况下我们不需要内容
-							} else if (content.includes('dns') && content.includes('outbounds') && content.includes('inbounds')) {
-								// Singbox 配置
-								订阅转换URL += "|" + url;
-								return ""; // 返回空字符串，因为这种情况下我们不需要内容
-							} else {
-								return content;
-							}
-						} else {
-							throw new Error('请求失败');
-						}
-					} catch (error) {
-						// 请求失败或超时，尝试从缓存读取
-						const cachedResponse = await cache.match(cacheKey);
-						if (cachedResponse) {
-							const cachedContent = await cachedResponse.text();
-							console.log(`使用缓存内容 ${url}:\n${cachedContent.slice(0, 10)}...`);
-							return cachedResponse.text();
-						} else {
-							console.log(`无缓存可用 ${url}`);
-							return ""; // 缓存中也没有，返回空字符串
-						}
-					}
-				}));
-
-				for (const response of responses) {
-					if (response) {
-						req_data += base64Decode(response) + '\n';
-					}
-				}
-
-			} catch (error) {
-				console.error('处理 URL 时发生错误：', error);
-			}
 			if (env.WARP) 订阅转换URL += "|" + (await ADD(env.WARP)).join("|");
 			//修复中文错误
 			const utf8Encoder = new TextEncoder();
@@ -370,4 +277,107 @@ function clashFix(content) {
 		content = result;
 	}
 	return content;
+}
+
+async function proxyURL(proxyURL, url) {
+	const URLs = await ADD(proxyURL);
+	const fullURL = URLs[Math.floor(Math.random() * URLs.length)];
+
+	// 解析目标 URL
+	let parsedURL = new URL(fullURL);
+	console.log(parsedURL);
+	// 提取并可能修改 URL 组件
+	let URLProtocol = parsedURL.protocol.slice(0, -1) || 'https';
+	let URLHostname = parsedURL.hostname;
+	let URLPathname = parsedURL.pathname;
+	let URLSearch = parsedURL.search;
+
+	// 处理 pathname
+	if (URLPathname.charAt(URLPathname.length - 1) == '/') {
+		URLPathname = URLPathname.slice(0, -1);
+	}
+	URLPathname += url.pathname;
+
+	// 构建新的 URL
+	let newURL = `${URLProtocol}://${URLHostname}${URLPathname}${URLSearch}`;
+
+	// 反向代理请求
+	let response = await fetch(newURL);
+
+	// 创建新的响应
+	let newResponse = new Response(response.body, {
+		status: response.status,
+		statusText: response.statusText,
+		headers: response.headers
+	});
+
+	// 添加自定义头部，包含 URL 信息
+	//newResponse.headers.set('X-Proxied-By', 'Cloudflare Worker');
+	//newResponse.headers.set('X-Original-URL', fullURL);
+	newResponse.headers.set('X-New-URL', newURL);
+
+	return newResponse;
+}
+
+async function getSUB(api, 追加UA, userAgentHeader) {
+	if (!api || api.length === 0) {
+		return [];
+	}
+
+	let newapi = "";
+	let 订阅转换URLs = "";
+	const controller = new AbortController(); // 创建一个AbortController实例，用于取消请求
+
+	const timeout = setTimeout(() => {
+		controller.abort(); // 2秒后取消所有请求
+	}, 2000);
+
+	try {
+		// 使用Promise.allSettled等待所有API请求完成，无论成功或失败
+		const responses = await Promise.allSettled(api.map(apiUrl => fetch(apiUrl, {
+			method: 'get',
+			headers: {
+				'Accept': 'text/html,application/xhtml+xml,application/xml;',
+				'User-Agent': `${追加UA} cmliu/CF-Workers-SUB ${userAgentHeader}`
+			},
+			signal: controller.signal // 将AbortController的信号量添加到fetch请求中
+		}).then(response => response.ok ? response.text() : Promise.reject())));
+
+		// 遍历所有响应
+		const modifiedResponses = responses.map((response, index) => {
+			// 检查是否请求成功
+			return {
+				status: response.status,
+				value: response.value,
+				apiUrl: api[index] // 将原始的apiUrl添加到返回对象中
+			};
+		});
+
+		console.log(modifiedResponses); // 输出修改后的响应数组
+
+		for (const response of modifiedResponses) {
+			// 检查响应状态是否为'fulfilled'
+			if (response.status === 'fulfilled') {
+				const content = await response.value || 'null'; // 获取响应的内容
+				if (content.includes('proxies') && content.includes('proxy-groups')) {
+					// Clash 配置
+					订阅转换URLs += "|" + response.apiUrl;
+				} else if (content.includes('outbounds') && content.includes('inbounds')) {
+					// Singbox 配置
+					订阅转换URLs += "|" + response.apiUrl;
+				} else {
+					newapi += base64Decode(content) + '\n'; // 解码并追加内容
+				}
+			}
+		}
+	} catch (error) {
+		console.error(error); // 捕获并输出错误信息
+	} finally {
+		clearTimeout(timeout); // 清除定时器
+	}
+
+	const 订阅内容 = await ADD(newapi);
+
+	// 返回处理后的结果
+	return [订阅内容, 订阅转换URLs];
 }
