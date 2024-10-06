@@ -25,13 +25,14 @@ https://sub.xunlian.site//api/v1/client/subscribe?token=17b619d61ef041a48432223e
 https://d7b12d59-21aa-9561-087f-89c834ac7fe8.372372.xyz/api/v1/client/subscribe?token=a0dcd411f821385d1a7567d12fd8e66b
 https://davy520.pages.dev/96821107-ac42-438a-b781-a5999197a21c#%E8%87%AA%E5%BB%BA
 https://pqjc.site/api/v1/client/subscribe?token=721c839e5146f6594ab607f23ee71acb
-https://sub.mxlweb.xyz/free
+
 `
 // https://sublink.52cloud.eu.org/api/v1/client/subscribe?token=8025d164-d726-40ed-af06-d7ea1138d1a4
 // https://sub.443888.xyz/sub?host=TG.CMLiussss.dns-dynamic.net&uuid=27b644d3-d9e8-45b2-96db-36ac1d00d50d
 // https://ssvless.sosorg.nyc.mn/sub?host=TG.CMLiussss.dns-dynamic.net&uuid=27b644d3-d9e8-45b2-96db-36ac1d00d50d
 // https://alvless.comorg.us.kg/sub?host=TG.CMLiussss.dns-dynamic.net&uuid=27b644d3-d9e8-45b2-96db-36ac1d00d50d
 // https://vless.fxxk.dedyn.io/sub?host=TG.CMLiussss.dns-dynamic.net&uuid=27b644d3-d9e8-45b2-96db-36ac1d00d50d
+// https://sub.mxlweb.xyz/free
 let urls = [];
 let subconverter = "subapi.fxxk.dedyn.io"; //在线订阅转换后端，目前使用CM的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
 let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_MultiCountry.ini"; //订阅配置文件
