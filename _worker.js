@@ -24,7 +24,10 @@ https://xquigzxz2.youxuan.wiki/api/v1/client/subscribe?token=dd5ecfb47379d2b3759
 https://sub.xunlian.site//api/v1/client/subscribe?token=17b619d61ef041a48432223e4a70db2a
 https://d7b12d59-21aa-9561-087f-89c834ac7fe8.372372.xyz/api/v1/client/subscribe?token=a0dcd411f821385d1a7567d12fd8e66b
 https://davy520.pages.dev/96821107-ac42-438a-b781-a5999197a21c#%E8%87%AA%E5%BB%BA
-https://sub.mxlweb.xyz/free
+https://sub.443888.xyz/sub?host=TG.CMLiussss.dns-dynamic.net&uuid=27b644d3-d9e8-45b2-96db-36ac1d00d50d
+https://ssvless.sosorg.nyc.mn/sub?host=TG.CMLiussss.dns-dynamic.net&uuid=27b644d3-d9e8-45b2-96db-36ac1d00d50d
+https://alvless.comorg.us.kg/sub?host=TG.CMLiussss.dns-dynamic.net&uuid=27b644d3-d9e8-45b2-96db-36ac1d00d50d
+https://vless.fxxk.dedyn.io/sub?host=TG.CMLiussss.dns-dynamic.net&uuid=27b644d3-d9e8-45b2-96db-36ac1d00d50d
 https://pqjc.site/api/v1/client/subscribe?token=721c839e5146f6594ab607f23ee71acb
 https://v2.chatpro.icu/api/v1/client/subscribe?token=af539924756432c3abef2f7a8fa33eba
 `
