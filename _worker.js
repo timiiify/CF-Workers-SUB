@@ -9,7 +9,6 @@ let FileName = '个人专用';
 let SUBUpdateTime = 6; //自定义订阅更新时间，单位小时
 let total = 999;//TB
 let timestamp = 4102329600000;//2099-12-31
-
 let cacheTTL = 24;//小时，缓存时长
 
 //节点链接 + 订阅链接
