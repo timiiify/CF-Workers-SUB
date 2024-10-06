@@ -24,6 +24,7 @@ https://xquigzxz2.youxuan.wiki/api/v1/client/subscribe?token=dd5ecfb47379d2b3759
 https://sub.xunlian.site//api/v1/client/subscribe?token=17b619d61ef041a48432223e4a70db2a
 https://d7b12d59-21aa-9561-087f-89c834ac7fe8.372372.xyz/api/v1/client/subscribe?token=a0dcd411f821385d1a7567d12fd8e66b
 https://davy520.pages.dev/96821107-ac42-438a-b781-a5999197a21c#%E8%87%AA%E5%BB%BA
+https://pqjc.site/api/v1/client/subscribe?token=721c839e5146f6594ab607f23ee71acb
 
 `
 // https://sublink.52cloud.eu.org/api/v1/client/subscribe?token=8025d164-d726-40ed-af06-d7ea1138d1a4
